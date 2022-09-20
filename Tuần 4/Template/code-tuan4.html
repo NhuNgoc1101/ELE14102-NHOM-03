@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BT tuan 4</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="tuan4.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        
+      </head>
+
+    <body> <br>   
+       
+         <h2 style="font-family:'Times New Roman', Times, serif"><center><i> Kiều Như Ngọc - B19DCDT160</i></h2>
+        <div class="container border border-dark " >
+            
+            <div class="row">
+                <div class="col " id="box1" >
+                    <h2>NHIỆT ĐỘ</h2>
+                         <input type="number" id="nhietDo" onchange="myFunction1()" 
+                         style="text-align: center;" >
+
+                </div>
+                <div class="col " >
+                    <h2>ĐỘ ẨM</h2>
+                        <input type="number" id="doAm" onchange="myFunction2()" 
+                         style="text-align: center;" >
+                </div>
+                <div class="col ">
+                    <h2>ÁNH SÁNG</h2>
+                    <input type="number" id="anhSang" onchange="myFunction3()" 
+                    style="text-align: center;" >
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-8 bg-white"><br>
+                    <p><b>BIỂU ĐỒ NHIỆT ĐỘ, ĐỘ ẨM, LƯỢNG MƯA</b></p>
+                    <img src="https://www.luyenthithukhoa.vn/attachments/01-png.41510/">
+                </div>
+
+                <div class="col-4" style="background-image: 
+                linear-gradient(to bottom right,rgb(250, 239, 239), rgb(214, 190, 194),rgb(176, 23, 176));">  
+                    <p><center>LED 1</center></p>
+                        <div class=" btn-group " id="led"  >
+                            <button onclick="getElementById('led1').style.backgroundColor='purple'" 
+                            type="button" class="btn btn-dark" id="led1">ON</button>
+
+                            <button onclick="getElementById('led2').style.backgroundColor='pink'"
+                            type="button" class="btn btn-light" id="led2">OFF</button><br>
+                        </div> 
+                    <p><center>LED 2</center></p>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                          </label>
+                          
+                          
+                </div>
+            </div>
+           
+            
+        <script src="tuan4.js"></script>
+    </body>
+</html>
