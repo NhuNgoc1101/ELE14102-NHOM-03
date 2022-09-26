@@ -6,9 +6,7 @@ const myNodeList = document.querySelectorAll('p');
     let nd1 = Math.floor(Math.random()*100);
     let da1 = Math.floor(Math.random()*100);   
     let as1 = Math.floor(Math.random()*100);
-    // console.log(nd1);
-    // console.log(da1);
-    // console.log(as1);
+
     function fsRandomNhietDo(){
                        
       if(nd1<20){
@@ -61,33 +59,23 @@ const myNodeList = document.querySelectorAll('p');
                         nds.push(nd1); nds.shift();
                         das.push(da1); das.shift();
                         ass.push(as1); ass.shift();
-                        // console.log(nds);
-                        // console.log(das);
-                        // console.log(ass);
                     }
                     bieuDo();
-                    // console.log(nds);
-                    // console.log(das);
-                    // console.log(ass);
+               
                 for(var i = 0; i < nds.length;i++){
                        myNodeList[0].textContent = `${nd1} °C`;
                        myNodeList[1].textContent = da1 + ' %';
                        myNodeList[2].textContent = as1 +' lux';
                     }; 
             
-               
-
                     Highcharts.chart('container', {
-
                         title: {
                           text: 'BIỂU ĐỒ'
                         },
-                        
-                        
+    
                         yAxis: {
                             min:0,
                             max:100,
-
                         },
                         
                         xAxis: {
@@ -103,78 +91,36 @@ const myNodeList = document.querySelectorAll('p');
                                 
                             }
                           },},
-                        // legend: {
-                        //   layout: 'vertical',
-                        //   align: 'right',
-                        //   verticalAlign: 'middle'
-                        // },
                         
-                        // plotOptions: {
-                        //   series: {
-                        //     marker: {
-                        //       // radius: 4,
-                        //       // lineColor: 'red',
-                        //       lineWidth: 1,
-                        //       borderColor:'red'
-                        //     }
-                          
-                        //   }
-                        // },
                         
                         series: [{
                           name: 'Độ ẩm',
-                          data: das
+                          data: 
                         }, {
                           name: 'Nhiệt độ',
                           marker: {
                             symbol: 'square',
-                            // radius: 4,
-                            // // lineColor: 'red',
-                            // lineWidth: 2,
-                            
                           },
-                          data:nds,
+                          data:
                         },{
-                        
                           name: 'Ánh sáng',
-                          data: ass
+                          data:
                         },],
-                        
-                        responsive: {
-                          rules: [{
-                            condition: {
-                              maxWidth: 100,
-                              minWidth:0
-                            },
-                            chartOptions: {
-                              legend: {
-                                layout: 'horizontal',
-                                align: 'center',
-                                verticalAlign: 'bottom',
-                                
-                              }
-                            }
-                          }]
-                        }     
                         });},2000);
 
  
 function myImage(){
     if(confirm('Bật đèn không?')==true){
         led = document.getElementById('myImage').src='bongdensang.jpg';
-        // document.getElementById('batDen').style.background='green'
     }else if(confirm('Tắt đèn không?')==true){
         led = document.getElementById('myImage').src='bongden.jpg'
-        // document.getElementById('batDen').style.background='red'
     }
 }
             
 function led2(){
     if(confirm('Bật đèn không?')==true){
         a = document.getElementById('led2').src='bongdensang.jpg';
-        // document.getElementById('batDen').style.background='green'
     }else if(confirm('Tắt đèn không?')==true){
         a = document.getElementById('led2').src='bongden.jpg'
-        // document.getElementById('batDen').style.background='red'
     }
 }
